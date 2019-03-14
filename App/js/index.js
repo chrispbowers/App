@@ -19,7 +19,12 @@ function onPageCreated() {
 	
 		  // Here, we're passing in some initial data
 		  data: { booklist: books }
+        
+        $('#submitButton').on("click", function(){
+    submitText();
+  })
 		});
+}
     
     function Randomise(){
     var onShake = function(){
@@ -32,6 +37,9 @@ var onError = function(){
     
 }
 
+function Barcode(){
+    alert("This button works so far! That's some progress!!");
+}
 
 //I lov it when my comments delete themselves
 //Get Randomise working cus it's not

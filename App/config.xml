@@ -17,8 +17,9 @@
         C.Bowers
     </author>
         
-        <plugin name="cordova-plugin-shake" />
-        <plugin name="cordova-barcode-scanner-gmv" />
+        <plugin name="cordova-plugin-shake" source="pgb" spec="~1" />
+        <plugin name="phonegap-plugin-barcodescanner" />
+        
     
 	
         
