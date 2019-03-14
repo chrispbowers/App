@@ -17,7 +17,8 @@
         C.Bowers
     </author>
         
-        <plugin name="cordova-plugin-file" />
+        <plugin name="cordova-plugin-shake" />
+    
 	
         
     <preference name="AndroidPersistentFileLocation" value="Internal" />
