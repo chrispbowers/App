@@ -21,6 +21,7 @@ function onPageCreated() {
 		  data: { booklist: books }
 		});
     
+    function Randomise(){
     var onShake = function(){
     alert("Ow!! Shaking hurts!");
 }
@@ -31,3 +32,7 @@ var onError = function(){
     
 }
 
+
+//I lov it when my comments delete themselves
+//Get Randomise working cus it's not
+//Attempt the whole adding in barcode plugin    

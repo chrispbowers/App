@@ -18,6 +18,7 @@
     </author>
         
         <plugin name="cordova-plugin-shake" />
+        <plugin name="cordova-barcode-scanner-gmv" />
     
 	
         
