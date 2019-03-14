@@ -21,3 +21,11 @@ function onPageCreated() {
 		  data: { booklist: books }
 		});
 }
+
+var onShake = function(){
+    alert("Ow!! Shaking hurts!");
+}
+
+var onError = function(){
+    alert("Um...it didn't work, sorry.");
+}
