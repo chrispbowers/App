@@ -20,12 +20,14 @@ function onPageCreated() {
 		  // Here, we're passing in some initial data
 		  data: { booklist: books }
 		});
-}
-
-var onShake = function(){
+    
+    var onShake = function(){
     alert("Ow!! Shaking hurts!");
 }
 
 var onError = function(){
     alert("Um...it didn't work, sorry.");
 }
+    
+}
+
