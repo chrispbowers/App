@@ -32,9 +32,13 @@
   
   		<div data-role="content" id="content">
              
-            <input type="text" id="textinput" value=""  />
-  	    
-        <button onClick="submitText()">Submit A</button>
+            <div id='container' data-role="fieldcontain">
+                    <label for="textarea">File Contents:</label>
+          			<textarea cols="40" rows="8" name="textarea" id="textarea" value=''></textarea> 
+                </div>
+        		
+              	<button id="writeFile">Submit</button>
+                <button id="deleteFile"> Delete</button>
             
   		</div>
   
