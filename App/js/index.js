@@ -3,6 +3,8 @@ var filetext  = "";
 var fileBinding;
 var fileEntry;
 
+var ractive;
+
 //parameters catch information
 //two types of listeners, web and device
 //$(subject).on("command", execute function);
@@ -13,6 +15,8 @@ console.log("setting up events");
 
 //setup event listeners
 $(document).on("pagecreate","#pageone", onPageCreated);
+
+
 
 books = [
   { name: 'Da Vinci Code', 	author: 'Dan Brown',  describe: 'It is fun and confusing'	},
@@ -26,9 +30,13 @@ document.addEventListener("deviceready", onDeviceReady, false);
 // once jQuery page 'pageone' has been created 
 function onPageCreated() {
 
-     console.log("page created");
+    $('#writeFile').on('tap', function(e){
+       addToList()
+})
+    
+   
 	
-    var ractive = new Ractive({
+     ractive = new Ractive({
 		  // The `el` option can be a node, an ID, or a CSS selector.
 		  el: '#listcontent',
 	
@@ -40,8 +48,26 @@ function onPageCreated() {
 		  data: { booklist: books } 
         
     })
-	
+    
     }
+    function addToList(){
+        
+        
+        books.push(
+        { name: 'bgdzfe', 	author: 'gfjgj',  describe: 'fcjm,fbg'}
+            );
+        
+        console.log(books);
+        
+        ractive.update();
+
+    }
+    
+    function deleteFile(){
+        
+    }
+	
+    
 
 function onDeviceReady() {
 	console.log("device ready");
