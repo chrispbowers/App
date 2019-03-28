@@ -9,6 +9,8 @@ var fileEntry;
 
 console.log("setting up events");
 
+
+
 //setup event listeners
 $(document).on("pagecreate","#pageone", onPageCreated);
 
@@ -37,21 +39,9 @@ function onPageCreated() {
 		  // Here, we're passing in some initial data
 		  data: { booklist: books } 
         
-       $('#submitButton').on("click", function()
-        {
-            submitText();
-        }
-                             )
-		}); 
-}
-
- 
-    
-	//setup buttons
-	$('#writeFile').on("click", writeFile);
-    $('deleteFile').on("Click", deleteFile);
+    })
 	
-
+    }
 
 function onDeviceReady() {
 	console.log("device ready");
@@ -63,7 +53,7 @@ function onDeviceReady() {
 }
 
 //get access to file and CREATE if does not exists
-function gotFS(fileSystem) {
+ function gotFS(fileSystem) {
     
  	fileSystem.getFile("test.txt", {create: true, exclusive: false}, gotFileEntry, fail);
 }
@@ -103,8 +93,7 @@ function readAsText(file) {
 
 
 //UDPATE file contents - called when submit button is pressed
-function writeFile()
-{
+function writeFile() {
     console.log("writeFile: "  + fileEntry.fullPath);
     
     filetext = $('#textarea').val();
@@ -118,34 +107,8 @@ function writeFile()
 
 }
 
-function deleteFile()
-{
-    console.log("deleteFile: " + fileEntry.fullpath);
-    
-    alert("This button works dw");
-    
-}
 
-function fail(error) {
-	alert("Cannot use file: " + error.message);
-}
-
-function Randomise(){
-    var onShake = function(){
-    alert("Ow!! Shaking hurts!");
-}
-
-var onError = function(){
-    alert("Um...it didn't work, sorry.");
-}
-    
-}
-
-function Barcode(){
-    alert("This button works so far! That's some progress!!");
-}
 
 //Get randomise function working
 //attach to Backendless instead of local
 //Get delete function working
-

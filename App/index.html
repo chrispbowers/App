@@ -7,6 +7,7 @@
         <link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
         <script src="jquery-mobile/jquery-1.11.1.min.js" type="text/javascript"></script>
 		<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <script src="ractive/ractive.js"></script>
     <!--	<script src="cordova.js"></script> -->
     	<script src="js/index.js"></script>
 </head>
@@ -14,16 +15,16 @@
 <body>
 	
     <script id='template' type='text/ractive'>
-		<ul>
-		 
+		
+        <ul>
          {{#each booklist}}
 			<li> {{name}}: {{author}}</li>
             <li>{{describe}} </li>
             <li> {{}} </li>
 			 {{/each}}
-		</ul>
+		</ul> 
         
-    </script>
+    </script> 
     
 <!-- the start of the content on the page, so buttons and stuff -->
     <div data-role="page" id="pageone">
@@ -35,15 +36,16 @@
   		<div data-role="content" id="content">
              
             <div id='container' data-role="fieldcontain">
-                    <label for="textarea">File Contents:</label>
+                    <label for="textarea">List Contents:</label>
           			<textarea cols="40" rows="8" name="textarea" id="textarea" value=''></textarea> 
                 </div>
-        		
-              	<button id="writeFile">Submit</button>
-                <button id="deleteFile"> Delete</button>
+            
+            
+              	<button id="writeFile">Add to List</button>
+                <button id="deleteFile"> Delete from List</button>
             
             <div id="listcontent">
-                ujiuu8
+                
             </div>
             
   		</div>
