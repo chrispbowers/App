@@ -54,7 +54,7 @@ function onPageCreated() {
         
         
         books.push(
-        { name: 'bgdzfe', 	author: 'gfjgj',  describe: 'fcjm,fbg'}
+        { name: '' , 	author: '' ,  describe: '' }
             );
         
         console.log(books);
