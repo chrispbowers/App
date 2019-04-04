@@ -18,10 +18,10 @@ $(document).on("pagecreate","#pageone", onPageCreated);
 
 
 
-books = [
+ books = [
   { name: 'Da Vinci Code', 	author: 'Dan Brown',  describe: 'It is fun and confusing'	},
   { name: 'Shutter Island',  author: 'Dennis Lehane', describe: 'Good plot twist'	},
-  { name: 'City of Bones',	author: 'Cassandra Clare', describe: 'Cool plot but wow is the series long'}
+  { name: 'City of Bones',	author: 'Cassandra Clare', describe: 'Cool plot but wow is the series long'},
 ];
 
 //setup listener for device API load
@@ -33,6 +33,10 @@ function onPageCreated() {
     $('#writeFile').on('tap', function(e){
        addToList()
 })
+    
+    $('deleteFile').on('tap', function(e){
+        takeFromList()
+    })
     
    
 	
@@ -57,14 +61,17 @@ function onPageCreated() {
         { name: '' , 	author: '' ,  describe: '' }
             );
         
+    
+        
         console.log(books);
         
         ractive.update();
 
     }
     
-    function deleteFile(){
+    function takeFromList(){
         
+      
     }
 	
     
@@ -132,9 +139,3 @@ function writeFile() {
 	);
 
 }
-
-
-
-//Get randomise function working
-//attach to Backendless instead of local
-//Get delete function working
