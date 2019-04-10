@@ -29,7 +29,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 // once jQuery page 'pageone' has been created 
 function onPageCreated() {
-
+    
+    //the add and delete buttons
     $('#writeFile').on('tap', function(e){
        addToList()
 })
@@ -54,14 +55,13 @@ function onPageCreated() {
     })
     
     }
-    function addToList(){
-        
+
+//functions that make adding to and taking from possible
+    function addToList(){     
         
         books.push(
         { name: $('textarea#titletext').val() , 	author: $('textarea#authortext').val() ,  describe: $('textarea#commenttext').val() }
             );
-        
-   
         
         console.log(books);
         
@@ -71,11 +71,12 @@ function onPageCreated() {
     
     function takeFromList(){
         
-      
+       
+        
     }
 	
     
-
+//everything onwards is how local storage is accessed
 function onDeviceReady() {
 	console.log("device ready");
 	
