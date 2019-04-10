@@ -63,6 +63,7 @@ function onPageCreated() {
     
     }
 
+//makes the camera open
 function displayAsImage(file) {
 	
 	//create a HTML image
