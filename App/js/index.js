@@ -58,10 +58,10 @@ function onPageCreated() {
         
         
         books.push(
-        { name: '' , 	author: '' ,  describe: '' }
+        { name: $('textarea#titletext').val() , 	author: $('textarea#authortext').val() ,  describe: $('textarea#commenttext').val() }
             );
         
-    
+   
         
         console.log(books);
         
