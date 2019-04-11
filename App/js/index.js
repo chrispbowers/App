@@ -96,7 +96,7 @@ function onDeviceReady() {
 }
 
 //camera stuff
-function capturePhoto() {
+/* function capturePhoto() {
 	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
 	destinationType: destinationType.DATA_URL });
 }
@@ -109,7 +109,7 @@ function onPhotoDataSuccess(imageData) {
 
 function onFail(message) {
       alert('Failed because: ' + message);
-}
+} */
 
 //get access to file and CREATE if does not exists
  function gotFS(fileSystem) {
