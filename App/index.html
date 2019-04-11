@@ -27,8 +27,30 @@
         
     </script> 
     
-
+<!-- page one -->
     <div data-role="page" id="pageone">
+  
+  		<div data-role="header">
+    		<h1>Header</h1>
+  		</div>
+  
+  		<div data-role="content" id="content">
+            
+            <div id="listcontent">
+                
+            </div>
+            
+            <a href="#pagetwo">Add New Entry</a>
+            
+  		</div>
+  
+  		<div data-role="footer">
+    		<h4>Footer</h4>
+  		</div>
+	</div>
+    
+    <!-- page two -->
+    <div data-role="page" id="pagetwo">
   
   		<div data-role="header">
     		<h1>Header</h1>
@@ -39,8 +61,6 @@
             <!-- camera stuff -->
             <input type="file" accept="image/*" capture>
 		<div id="imagePreview"></div>
-            
-            
             
             <!-- the creation of text areas and buttons --> 
             <div id='container' data-role="fieldcontain">
@@ -57,6 +77,7 @@
             
               	<button id="writeFile">Add to List</button>
                 <button id="deleteFile"> Delete from List</button>
+                <a href="#pageone">Back to Library</a>
             
             <div id="listcontent">
                 
