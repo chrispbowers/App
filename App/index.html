@@ -37,9 +37,10 @@
   		<div data-role="content" id="content">
             
             <!-- camera stuff -->
-            <input type="file" accept="image/*" capture>
-		<div id="imagePreview"></div>
-            
+           <label for="phonegapcamera"> Use PhoneGap to take an image </label>
+       	<button id="phonegapcamera" onclick="capturePhoto();">Capture Photo</button> <br>
+       
+		<img style="display:none;width:200px;height:200px;" id="image" src="" />
             
             
             <!-- the creation of text areas and buttons --> 

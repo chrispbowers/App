@@ -63,28 +63,7 @@ function onPageCreated() {
     
     }
 
-//makes the camera open
-function displayAsImage(file) {
-	
-	//create a HTML image
-  	var imgURL = URL.createObjectURL(file);
-  	var img = document.createElement('img');
 
-	//when the image is loading get the URL location of the file.
-  	img.onload = function() {
-    	URL.revokeObjectURL(imgURL);
-  	};
-
-	//set the img URL
-  	img.src = imgURL;
-  
-  	//fix the size of the image
-  	img.width = 200;
-  	img.height = 200;
-  
-  	//insert the image intothe DOM so its displayed.
-  	$('#imagePreview').html(img);
-}
 
 //functions that make adding to and taking from possible
     function addToList(){     
@@ -109,11 +88,27 @@ function displayAsImage(file) {
 //everything onwards is how local storage is accessed
 function onDeviceReady() {
 	console.log("device ready");
-	
+	destinationType=navigator.camera.DestinationType;
     
     //following allows you to gain access to the supported platform specific locations that are shared by all applications (useful for stioring images, music etc. )
     window.resolveLocalFileSystemURL(cordova.file.dataDirectory, gotFS, fail);
     //syncedDataDirectory if you wanna sync to iCloud
+}
+
+//camera stuff
+function capturePhoto() {
+	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+	destinationType: destinationType.DATA_URL });
+}
+	
+function onPhotoDataSuccess(imageData) {
+	var image = document.getElementById('image');
+	image.style.display = 'block';
+	image.src = "data:image/jpeg;base64," + imageData;
+}
+
+function onFail(message) {
+      alert('Failed because: ' + message);
 }
 
 //get access to file and CREATE if does not exists
