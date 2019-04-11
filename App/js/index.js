@@ -88,7 +88,7 @@ function onPageCreated() {
 //everything onwards is how local storage is accessed
 function onDeviceReady() {
 	console.log("device ready");
-	destinationType=navigator.camera.DestinationType;
+	//destinationType=navigator.camera.DestinationType;
     
     //following allows you to gain access to the supported platform specific locations that are shared by all applications (useful for stioring images, music etc. )
     window.resolveLocalFileSystemURL(cordova.file.dataDirectory, gotFS, fail);
