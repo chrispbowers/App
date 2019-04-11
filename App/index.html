@@ -30,7 +30,7 @@
 <!-- page one -->
     <div data-role="page" id="pageone">
   
-  		<div data-role="header">
+  		<div data-role="header" data-position="fixed">
     		<h1>Header</h1>
   		</div>
   
@@ -44,7 +44,7 @@
             
   		</div>
   
-  		<div data-role="footer" data-postion="fixed">
+  		<div data-role="footer" data-position="fixed">
     		<a href="#pagetwo" data-role="button">Add New Entry</a>
   		</div>
 	</div>
@@ -52,7 +52,7 @@
     <!-- page two -->
     <div data-role="page" id="pagetwo">
   
-  		<div data-role="header">
+  		<div data-role="header" data-position="fixed">
     		<h1>Header</h1>
   		</div>
   
@@ -77,15 +77,14 @@
             
               	<button id="writeFile">Add to List</button>
                 <button id="deleteFile"> Delete from List</button>
-                <a href="#pageone">Back to Library</a>
-            
+
             <div id="listcontent">
                 
             </div>
             
   		</div>
   
-  		<div data-role="footer" data-postion="fixed">
+  		<div data-role="footer" data-position="fixed">
     		<a href="#pageone" data-role="button">Back to Library</a>
             
         
