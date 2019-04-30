@@ -112,6 +112,7 @@ function displayAsImage(file) {
 //everything onwards is how local storage is accessed
 function onDeviceReady() {
 	console.log("device ready");
+	console.log(cordova);
      console.log(cordova.file);
 	
     
