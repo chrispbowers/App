@@ -112,6 +112,7 @@ function displayAsImage(file) {
 //everything onwards is how local storage is accessed
 function onDeviceReady() {
 	console.log("device ready");
+     console.log(cordova.file);
 	
     
     //following allows you to gain access to the supported platform specific locations that are shared by all applications (useful for stioring images, music etc. )
