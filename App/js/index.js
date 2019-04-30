@@ -111,7 +111,7 @@ function displayAsImage(file) {
     
 //everything onwards is how local storage is accessed
 function onDeviceReady() {
-	console.log("device ready");
+	console.log("device ready123");
 	console.log("odv_ " + cordova);
      console.log("odv " + cordova.file);
 	
