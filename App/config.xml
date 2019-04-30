@@ -16,6 +16,7 @@
     <author href="https://build.phonegap.com" email="c.bowers@worc.ac.uk">
         C.Bowers
     </author>
+        <preference name="phonegap-version" value="cli-8.0.0" />
         
       <!--  <plugin name="cordova-plugin-shake" source="pgb" spec="~1" /> -->
         <plugin name="phonegap-plugin-barcodescanner" />
