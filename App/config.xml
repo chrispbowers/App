@@ -25,7 +25,5 @@
         
 
         
-    <preference name="AndroidPersistentFileLocation" value="Internal" />
-    <preference name="iosPersistentFileLocation" value="Library" />
-        
+    
 </widget>
