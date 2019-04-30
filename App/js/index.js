@@ -96,6 +96,9 @@ function displayAsImage(file) {
         console.log(books);
         
         ractive.update();
+        
+        writeFile(books);
+        
 
     }
     
@@ -118,7 +121,7 @@ function onDeviceReady() {
 
 //get access to file and CREATE if does not exists
  function gotFS(fileSystem) {
-    
+    console.log("got fs");
  	fileSystem.getFile("test.txt", {create: true, exclusive: false}, gotFileEntry, fail);
 }
 
@@ -157,10 +160,10 @@ function readAsText(file) {
 
 
 //UDPATE file contents - called when submit button is pressed
-function writeFile() {
+function writeFile(text) {
     console.log("writeFile: "  + fileEntry.fullPath);
     
-    filetext = $('#textarea').val();
+    filetext = text;
     
 	fileEntry.createWriter(
 		function (writer) { 
